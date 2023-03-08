@@ -34,3 +34,17 @@ function addThreeNums(a) {
 
 sum = addThreeNums(3)(6)(8);
 console.log(sum);
+
+/*
+ * Currying with ES6 Notation
+ */
+
+const addDosNumeros = a => b => a + b;
+
+sum = addDosNumeros(20)(40);
+console.log(sum);
+
+const addTresNumeros = a => b => c => a + b + c;
+
+sum = addTresNumeros(20)(30)(50);
+console.log(sum);
