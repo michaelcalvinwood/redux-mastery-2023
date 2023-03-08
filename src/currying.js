@@ -48,3 +48,16 @@ const addTresNumeros = a => b => c => a + b + c;
 
 sum = addTresNumeros(20)(30)(50);
 console.log(sum);
+
+/*
+ * Currying with lodash function programming library
+ */
+
+import { pipe } from 'lodash/fp';
+
+const trim = str => str.trim();
+const toUpper = str => str.toUpperCase();
+const greeting = message => name => `${message} ${name}`;
+
+const newFunc = pipe(trim, toUpper, greeting('Hola'));
+console.log(newFunc('    Michael    '));
