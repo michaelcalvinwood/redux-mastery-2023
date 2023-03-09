@@ -3,7 +3,11 @@ import { addTask, removeTask } from './action';
 
 console.log(store.getState());
 
-store.dispatch(addTask('Buy Eggs'));
+store.subscribe(() => {
+    console.log('updated state', store.getState());
+})
+
+store.dispatch(addTask('Buy Bread'));
 
 console.log(store.getState());
 

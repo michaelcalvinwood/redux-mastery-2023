@@ -1,8 +1,10 @@
 // action.js contains the factory for producing action dispatch objects
 
+import * as actionType from './actionTypes';
+
 export const addTask = task => {
     return {
-        type: 'ADD_TASK',
+        type: actionType.ADD_TASK,
         payload: {
             task
         } 
@@ -11,7 +13,7 @@ export const addTask = task => {
 
 export const removeTask = id => {
     return {
-        type: 'REMOVE_TASK',
+        type: actionType.REMOVE_TASK,
         payload: {
             id
         } 
