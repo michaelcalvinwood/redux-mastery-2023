@@ -8,9 +8,9 @@ const unsubscribe = store.subscribe(() => {
     console.log('updated state', store.getState());
 })
 
-store.dispatch(addTask('Buy Bread'));
+store.dispatch(addTask({task: 'Buy Bread'}));
 
-store.dispatch(markCompleted(1));
+store.dispatch(markCompleted({id: 1}));
 
 //store.dispatch(removeTask(1));
 

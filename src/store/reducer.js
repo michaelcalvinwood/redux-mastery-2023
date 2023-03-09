@@ -1,9 +1,9 @@
-import * as actionType from './actionTypes';
+import * as actions from './action';
 let id = 0;
 
 export default function reducer (state = [], action) {
     switch (action.type) {
-        case actionType.ADD_TASK:
+        case actions.addTask.type:
             return [
                 ...state,
                 {
@@ -12,9 +12,9 @@ export default function reducer (state = [], action) {
                     completed: false
                 }
             ] 
-        case actionType.REMOVE_TASK:
+        case actions.removeTask.type:
             return state.filter(task => task.id !== action.payload.id);
-        case actionType.MARK_COMPLETED:
+        case actions.markCompleted.type:
             return state.map(task => task.id === action.payload.id ? {...task, completed: true} : task);
             
         default:
