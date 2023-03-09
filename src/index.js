@@ -1,5 +1,8 @@
-import store from "./store";
-import { addTask, removeTask, markCompleted } from './action';
+// Reduc ToolKit: https://redux-toolkit.js.org/
+
+
+import store from "./store/store";
+import { addTask, removeTask, markCompleted } from './store/action';
 
 const unsubscribe = store.subscribe(() => {
     console.log('updated state', store.getState());
