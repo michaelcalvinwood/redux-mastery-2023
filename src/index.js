@@ -1,5 +1,5 @@
 import store from "./store";
-import { addTask, removeTask } from './action';
+import { addTask, removeTask, markCompleted } from './action';
 
 const unsubscribe = store.subscribe(() => {
     console.log('updated state', store.getState());
@@ -7,6 +7,8 @@ const unsubscribe = store.subscribe(() => {
 
 store.dispatch(addTask('Buy Bread'));
 
-store.dispatch(removeTask(1));
+store.dispatch(markCompleted(1));
+
+//store.dispatch(removeTask(1));
 
 unsubscribe();

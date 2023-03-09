@@ -19,3 +19,14 @@ export const removeTask = id => {
         } 
     }
 };
+
+export const markCompleted = id => {
+    return {
+        type: actionType.MARK_COMPLETED,
+        payload: {
+            id
+        } 
+    }
+};
+
+
