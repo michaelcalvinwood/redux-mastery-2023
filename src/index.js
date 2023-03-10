@@ -2,7 +2,7 @@
 
 
 import store from "./store/store";
-import { addTask, removeTask, markCompleted } from './store/action';
+import { addTask, removeTask, markCompleted } from './store/sliceTasks';
 
 const unsubscribe = store.subscribe(() => {
     console.log('updated state', store.getState());

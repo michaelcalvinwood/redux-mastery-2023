@@ -4,18 +4,18 @@ let id = 0;
 
 
 export default createReducer([], {
-    "ADD_TASK": (state, action) => {
+    [actions.addTask.type]: (state, action) => {
         state.push({
             id: ++id,
             task: action.payload.task,
             completed: false
         })
     }, 
-    "REMOVE_TASK": (state, action) => {
+    [actions.removeTask.type]: (state, action) => {
         const index = state.findIndex(task => task.id === action.payload.id);
         state.splice(index, 1);
     },
-    "MARK_COMPLETED": (state, action) => {
+    [actions.markCompleted.type]: (state, action) => {
         const index = state.findIndex(task => task.id === action.payload.id);
         state[index].completed = true;
     }
