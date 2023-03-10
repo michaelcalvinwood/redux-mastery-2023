@@ -2,7 +2,7 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 
 import taskReducer from './tasks';
 import employeesReducer from './employees';
-import log from './middleware/log';
+import log from '../store/middleware/log';
 import logger from 'redux-logger';
 
 const store = configureStore({ 
